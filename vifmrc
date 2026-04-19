@@ -15,6 +15,8 @@ colorscheme Default-256 Default
 "nnoremap s :!alacritty --working-directory="%d" &<cr>
 "nnoremap s :cd %d | shell<cr>
 nnoremap s :shell<cr>
+nnoremap x :!sudo chmod +x "%f"<cr>
+nnoremap X :!sudo chmod -x "%f"<cr>
 
 " ------------------------------------------------------------------------------
 "  BOOKMARKS  m+letter to create '+letter to go to mark
