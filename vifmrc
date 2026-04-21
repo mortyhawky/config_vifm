@@ -18,7 +18,7 @@ nnoremap s :shell<cr>
 nnoremap x :!sudo chmod +x "%f"<cr>
 nnoremap X :!sudo chmod -x "%f"<cr>
 " Shift-Ctrl+E to edit as root
-nnoremap <S-C-e> :!sudo nvim "%f"
+nnoremap <c-e> :!sudo nvim "%f"<cr>
 
 " ------------------------------------------------------------------------------
 "  BOOKMARKS  m+letter to create '+letter to go to mark
