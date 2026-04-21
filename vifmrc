@@ -19,6 +19,9 @@ nnoremap x :!sudo chmod +x "%f"<cr>
 nnoremap X :!sudo chmod -x "%f"<cr>
 " Shift-Ctrl+E to edit as root
 nnoremap <c-e> :!sudo nvim "%f"<cr>
+" Open editor to edit vifmrc and apply settings after returning to vifm
+nnoremap ,c :write | edit $MYVIFMRC | restart full<cr>
+nnoremap ,r :run<cr>
 
 " ------------------------------------------------------------------------------
 "  BOOKMARKS  m+letter to create '+letter to go to mark
@@ -572,8 +575,6 @@ elseif $TERMINAL != ''
     nnoremap ,t :!$TERMINAL &<cr>
 endif
 
-" Open editor to edit vifmrc and apply settings after returning to vifm
-nnoremap ,c :write | edit $MYVIFMRC | restart full<cr>
 
 " Open gvim to edit vifmrc
 if $DISPLAY != '' && executable('gvim')
