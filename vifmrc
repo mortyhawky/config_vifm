@@ -20,8 +20,15 @@ nnoremap X :!sudo chmod -x "%f"<cr>
 " Shift-Ctrl+E to edit as root
 nnoremap <c-e> :!sudo nvim "%f"<cr>
 " Open editor to edit vifmrc and apply settings after returning to vifm
-nnoremap ,c :write | edit $MYVIFMRC | restart full<cr>
+nnoremap ,ev :write | edit $MYVIFMRC | restart full<cr>
 nnoremap ,r :run<cr>
+
+" ,fl = Resolve Symlinks
+nnoremap ,lf :set followlinks
+nnoremap ,ln :set nofollowlinks
+" Automatically resolve symbolic links on l or Enter.
+set nofollowlinks
+"set followlinks
 
 " ------------------------------------------------------------------------------
 "  BOOKMARKS  m+letter to create '+letter to go to mark
@@ -129,8 +136,6 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,tabs,shistory,ehistory,
 " the directory history.
 set history=100
 
-" Automatically resolve symbolic links on l or Enter.
-set nofollowlinks
 
 " Natural sort of (version) numbers within text.
 set sortnumbers
