@@ -1,5 +1,6 @@
 " vim: filetype=vim :
 
+
 " ------------------------------------------------------------------------------
 "  SETTINGS   ~/.config/vifm/vifmrc
 " ------------------------------------------------------------------------------
@@ -7,7 +8,7 @@ set vicmd=nvim
 set dotfiles
 set relativenumber  
 " List of color schemes to try (picks the first one supported by the terminal)
-colorscheme Default-256 Default
+colorscheme istib-Solarized-dark Default-256 Default
 
 " ------------------------------------------------------------------------------
 "  MAPPINGS
@@ -20,8 +21,9 @@ nnoremap X :!sudo chmod -x "%f"<cr>
 " Shift-Ctrl+E to edit as root
 nnoremap <c-e> :!sudo nvim "%f"<cr>
 " Open editor to edit vifmrc and apply settings after returning to vifm
-nnoremap ,ev :write | edit $MYVIFMRC | restart full<cr>
+nnoremap ,ev :write | edit ~/.config/vifm/vifmrc
 nnoremap ,r :run<cr>
+nnoremap ,c :edit ~/.config/vifm/vifmrc
 
 " ,fl = Resolve Symlinks
 nnoremap ,lf :set followlinks
@@ -66,7 +68,7 @@ command! run !! ./%f
 command! make !!make %a
 command! mkcd :mkdir %a | cd %a
 command! vgrep nvim "+grep %a"
-command! reload :write | restart full
+"command! reload :write | restart full
 " Sample configuration file for vifm (last updated: 11 May, 2025)
 "
 " You can edit this file by hand.  The " character at the beginning of a line
@@ -648,3 +650,5 @@ nnoremap <a-o> :sync %c<cr>
 " ------------------------------------------------------------------------------
 
 " https://github.com/cirala/vifm_devicons
+:echo "vifm 653"
+
