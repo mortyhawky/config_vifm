@@ -23,7 +23,7 @@ nnoremap <c-e> :!sudo nvim "%f"<cr>
 " Open editor to edit vifmrc and apply settings after returning to vifm
 nnoremap ,ev :write | edit ~/.config/vifm/vifmrc
 nnoremap ,r :run<cr>
-nnoremap ,c :edit ~/.config/vifm/vifmrc
+nnoremap ,c :edit ~/.config/vifm/vifmrc<cr>:write | restart full
 
 " ,fl = Resolve Symlinks
 nnoremap ,lf :set followlinks
@@ -31,6 +31,19 @@ nnoremap ,ln :set nofollowlinks
 " Automatically resolve symbolic links on l or Enter.
 set nofollowlinks
 "set followlinks
+
+nnoremap <TAB> :echo "TAB"
+nnoremap <ESC> <ESC>:echo "ESC"
+
+"Ctrl-W o - leave only one pane.                vifm-CTRL-W_o
+"Ctrl-W s - split window horizontally.          vifm-CTRL-W_s
+"Ctrl-W v - split window vertically.            vifm-CTRL-W_v
+nnoremap <SPACE>- <C-W>s
+nnoremap <SPACE>| <C-W>v
+nnoremap <c-h> :wincmd h<CR>
+nnoremap <c-j> :wincmd j<CR>
+nnoremap <c-k> :wincmd k<CR>
+nnoremap <c-l> :wincmd l<CR>
 
 " ------------------------------------------------------------------------------
 "  BOOKMARKS  m+letter to create '+letter to go to mark
